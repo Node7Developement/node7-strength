@@ -1,0 +1,20 @@
+name: node7-strength
+description: Separate NODE7 player strength system for RedM with native training prompts, XP, and framework exports.
+author: NODE7 Development Studios
+version: 1.0.0
+
+tasks:
+  - action: download_github
+    src: https://github.com/Node7Developement/node7-strength
+    ref: main
+    dest: ./resources/[node7]/node7-strength
+
+  - action: connect_database
+
+  - action: query_database
+    file: ./resources/[node7]/node7-strength/sql/node7_strength.sql
+
+  - action: append_to_file
+    file: ./server.cfg
+    text: |
+      ensure node7-strength

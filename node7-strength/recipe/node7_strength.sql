@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS `node7_strength` (
+    `citizenid` VARCHAR(64) NOT NULL,
+    `level` INT NOT NULL DEFAULT 1,
+    `xp` INT NOT NULL DEFAULT 0,
+    `total_xp` INT NOT NULL DEFAULT 0,
+    `daily_xp` INT NOT NULL DEFAULT 0,
+    `daily_reset` VARCHAR(16) NOT NULL DEFAULT '',
+    `last_train` INT NOT NULL DEFAULT 0,
+    `last_fight_xp` INT NOT NULL DEFAULT 0,
+    `last_decay_check` INT NOT NULL DEFAULT 0,
+    `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`citizenid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

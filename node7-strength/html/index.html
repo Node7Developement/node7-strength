@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NODE7 Strength</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="strength-card" class="strength-card hidden">
+        <div class="card-frame">
+            <div class="brand" id="brand">NODE7</div>
+            <div class="title" id="title">PLAYER STRENGTH</div>
+            <button id="close" class="close">×</button>
+
+            <div class="level-row">
+                <div>
+                    <div class="muted">Level</div>
+                    <div class="level" id="level">1</div>
+                </div>
+                <div>
+                    <div class="muted">Rank</div>
+                    <div class="rank" id="rank">Greenhorn</div>
+                </div>
+            </div>
+
+            <div class="xp-line">
+                <span id="xpText">0 / 100 XP</span>
+                <span id="dailyText">0 daily</span>
+            </div>
+
+            <div class="bar-wrap">
+                <div id="xpBar" class="bar-fill"></div>
+            </div>
+
+            <div class="stat-grid">
+                <div class="stat">
+                    <span>Brawl</span>
+                    <b id="brawlBonus">+0%</b>
+                </div>
+                <div class="stat">
+                    <span>Carry</span>
+                    <b id="carryBonus">+0%</b>
+                </div>
+                <div class="stat">
+                    <span>Stamina</span>
+                    <b id="staminaBonus">+0%</b>
+                </div>
+                <div class="stat">
+                    <span>Resist</span>
+                    <b id="resistBonus">+0%</b>
+                </div>
+            </div>
+
+            <div class="hint">Train at native strength spots or earn small XP from clean brawls.</div>
+        </div>
+    </div>
+
+    <div id="xp-popup" class="xp-popup hidden">
+        <div id="xpReason" class="xp-reason">Training</div>
+        <div id="xpAmount" class="xp-amount">+0 Strength XP</div>
+        <div id="levelUp" class="level-up hidden">LEVEL UP</div>
+    </div>
+
+    <div id="training-pop" class="training-pop hidden">
+        <div class="training-title">Training Strength</div>
+        <div id="trainingLabel" class="training-label">Strength Drill</div>
+        <div class="training-bar"><div id="trainingFill"></div></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
